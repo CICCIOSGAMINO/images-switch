@@ -1,0 +1,13 @@
+{
+  "name": "images-switch",
+  "version": "1.0.0",
+  "description": "WebComponent of simple switch, toggle between two images (SVG)",
+  "main": "index.js",
+  "repository": "https://github.com/CICCIOSGAMINO/images-switch.git",
+  "author": "@cicciosgamino <marco.canali@gmail.com>",
+  "license": "Apache2.0",
+  "private": false,
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
+}
