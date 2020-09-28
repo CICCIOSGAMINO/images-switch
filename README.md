@@ -1,10 +1,3 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/CICCIOSGAMINO/cicciosgamino.github.io">
-    <img src="https://raw.githubusercontent.com/CICCIOSGAMINO/cicciosgamino.github.io/master/images/justme%40412x412_round.png" alt="cicciosgamino.github.io">
-  </a>
-</h1>
-
 <h4 align="center">@cicciosgamino official web root.</h4>
 
 <p align="center">
@@ -38,4 +31,12 @@
 ```
 
 ## 📦 Installation
+
+## Images 
+The switch toggle between two background images. Images need to be in svg format with an aspect raction of 2 width and 1 height (rectangle) eg. 100*50 . 
+
+## 🔧 TODO 
+
++ Handle the attribute / property disabled, checked and all the native input type=checkbox 
++ Add the role="switch" to '<images-switch>' custom element.
 
