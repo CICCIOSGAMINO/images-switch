@@ -8,13 +8,20 @@ class ImagesSwitch extends LitElement {
         type: Boolean,
         attribute: true,
         reflect: true
+      },
+      disabled: {
+        type: Boolean,
+        attribute: true,
+        refelect: true
       }
     }
   }
 
   constructor() {
     super()
+    // init
     this.checked = false
+    this.disabled = false
   }
 
   static get styles() {
@@ -40,9 +47,9 @@ class ImagesSwitch extends LitElement {
         --inner-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
 
         /* background svg 2:1 images */
-        --url-bk-image-unchecked: url(http://localhost:8888/de.svg);
-        --url-bk-image-checked: url(http://localhost:8888/it.svg);
-        --url-bk-image-disabled: url(http://localhost:8888/forest.svg);
+        --bk-image-unchecked: url(http://localhost:8888/de.svg);
+        --bk-image-checked: url(http://localhost:8888/it.svg);
+        --bk-image-disabled: url(http://localhost:8888/forest.svg);
       }
 
       /*  1- Now we need to change the label position as relative , so that we can make 
@@ -58,7 +65,7 @@ class ImagesSwitch extends LitElement {
         cursor: pointer;
         transition: all .3s;
 
-        background-image: var(--url-bk-image-unchecked);
+        background-image: var(--bk-image-unchecked);
         background-size: var(--switch-width) var(--switch-height);
 
         /* inner shadow */
@@ -93,14 +100,14 @@ class ImagesSwitch extends LitElement {
         /* fallback color */ 
         background-color: var(--bk-checked-color);
 
-        background-image: var(--url-bk-image-checked);
+        background-image: var(--bk-image-checked);
         background-size: var(--switch-width) var(--switch-height);
       }
 
       /* 4 - Handling the disabled style */ 
       input[type=checkbox][disabled] + label {
         background-color: var(--bk-disabled-color);
-        background-image: var(--url-bk-image-disabled);
+        background-image: var(--bk-image-disabled);
         background-size: var(--switch-width) var(--switch-height);
       }
 
@@ -147,20 +154,72 @@ class ImagesSwitch extends LitElement {
 
   connectedCallback() {
     super.connectedCallback()
-    // get the focus to host element
-    this.tabIndex = 0
-    this.checkbox = 
+    // set attribute
+    this.setAttribute('tabindex', '0')
+    this.setAttribute('role', 'switch')
+    // connect listeners
+    this.addEventListener('keyup', this._handleKeyPress)
   }
 
-  _handleChange(e) {
-    console.log(e.detail.message)
+  disconnectedCallback() {
+    // disconnect listeners
+    this.removeEventListener('keyup', this._handleKeyPress)
+
+    super.disconnectedCallback()
+  }
+
+  _handleKeyPress(e) {
+
+    const KEYCODE = {
+      ENTER: 13,
+      SPACE: 32,
+      TAB: 9
+    }
+
+    if (!this.disabled) {
+      switch (e.keyCode) {
+        case KEYCODE.SPACE:
+          this._handleToggle()
+          break
+        case KEYCODE.ENTER:
+          this._handleToggle()
+          break
+      }
+    }
+  }
+
+  _handleChange() {
+    if (!this.disabled) {
+      this.checked = this.shadowRoot.querySelector('#switch').checked
+      this._dispatchChange(this.checked)
+    }
+  }
+
+  _handleToggle() {
+    if (!this.disabled) {
+      this.checked = !this.checked
+      this._dispatchChange(this.checked)
+    }
+  }
+
+  _dispatchChange(checked) {
+
+    const changeEvent = new CustomEvent('change', {
+      detail: { checked: checked },
+      bubbles: true,
+      composed: true
+    })
+
+    this.dispatchEvent(changeEvent)
   }
 
   render() {
     return html`
         <input type="checkbox"
           id="switch"
-          role="switch" 
+          role="switch"
+          .checked="${this.checked}"
+          ?disabled="${this.disabled}"
           @change="${this._handleChange}" />
         <label for="switch"></label>
     `
