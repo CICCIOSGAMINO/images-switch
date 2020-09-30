@@ -25,6 +25,11 @@
       padding: 2em;
       text-align: center;
     }
+
+    images-switch {
+      --switch-width: 80px;
+      --switch-height: 40px;
+    }
   </style>
   
 </head>
@@ -44,7 +49,7 @@
   <script>
     const imgSwitch = document.querySelector('images-switch')
     imgSwitch.addEventListener('change', (e) => {
-      console.log(e)
+      console.log(e.detail.checked)
     })
   </script>
 

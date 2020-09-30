@@ -13,7 +13,8 @@ class ImagesSwitch extends LitElement {
         type: Boolean,
         attribute: true,
         refelect: true
-      }
+      },
+      value: String
     }
   }
 
@@ -22,6 +23,7 @@ class ImagesSwitch extends LitElement {
     // init
     this.checked = false
     this.disabled = false
+    this.value = ''
   }
 
   static get styles() {
@@ -104,29 +106,6 @@ class ImagesSwitch extends LitElement {
         background-size: var(--switch-width) var(--switch-height);
       }
 
-      /* 4 - Handling the disabled style */ 
-      input[type=checkbox][disabled] + label {
-        background-color: var(--bk-disabled-color);
-        background-image: var(--bk-image-disabled);
-        background-size: var(--switch-width) var(--switch-height);
-      }
-
-      input[type=checkbox][disabled] + label::after {
-        /* move left */
-        left: calc(100% - (var(--switch-height) - var(--circle-margin)));
-      }
-
-      /* 5 - Handling indeterminate */ 
-      input[type=checkbox]:indeterminate + label {
-        background-color: var(--bk-disabled-color);
-        background-image: none;
-      }
-
-      input[type=checkbox]:indeterminate + label::after {
-        /* left middle position */ 
-        left: calc(100% - (var(--switch-height) * 1.4));
-      }
-
       /* handle the fallback background hover focus (useless with images) */ 
       input[type=checkbox]:focus + label {
         background-color: var(--bk-hover-color);
@@ -143,6 +122,32 @@ class ImagesSwitch extends LitElement {
 
       input[type=checkbox]:hover + label::after {
         box-shadow: var(--shadow-focus-on);
+      }
+
+      /* 4 - Handling the disabled style */ 
+      input[type=checkbox][disabled] + label {
+        background-color: var(--bk-disabled-color);
+        background-image: var(--bk-image-disabled);
+        background-size: var(--switch-width) var(--switch-height);
+        cursor: not-allowed;
+      }
+
+      input[type=checkbox][disabled] + label::after {
+        /* move left */
+        left: calc(100% - (var(--switch-height) - var(--circle-margin)));
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+
+      /* 5 - Handling indeterminate */ 
+      input[type=checkbox]:indeterminate + label {
+        background-color: var(--bk-disabled-color);
+        background-image: none;
+      }
+
+      input[type=checkbox]:indeterminate + label::after {
+        /* left middle position */ 
+        left: calc(100% - (var(--switch-height) * 1.4));
       }
 
       /* 6 - Let's hide the default checkbox */ 
@@ -164,7 +169,6 @@ class ImagesSwitch extends LitElement {
   disconnectedCallback() {
     // disconnect listeners
     this.removeEventListener('keyup', this._handleKeyPress)
-
     super.disconnectedCallback()
   }
 
@@ -203,7 +207,6 @@ class ImagesSwitch extends LitElement {
   }
 
   _dispatchChange(checked) {
-
     const changeEvent = new CustomEvent('change', {
       detail: { checked: checked },
       bubbles: true,
@@ -219,12 +222,12 @@ class ImagesSwitch extends LitElement {
           id="switch"
           role="switch"
           .checked="${this.checked}"
+          .value="${this.value}"
           ?disabled="${this.disabled}"
           @change="${this._handleChange}" />
         <label for="switch"></label>
     `
   }
-
 }
 
 customElements.define('images-switch', ImagesSwitch)

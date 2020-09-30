@@ -46,16 +46,45 @@ npm i images-switch
 <script src ="https://unpkg.com/images-switch@1.0.0/lib/index.min.js"></script>
 ```
 
+# Usage
+
 ## Images 
 The switch toggle between two background images. Images need to be in svg format with an aspect raction of 2 width and 1 height (rectangle) eg. 100*50 . 
+
+# API
+
+## Attributes
+- `checked`
+
+ Add this attribute to set the switch to toggled / checked mode i.e., equivalent to 'checked' attribute of input type 
+```html
+<images-switch checked></images-switch>
+```
+  (or)
+```javascript
+const imgSwitch = document.querySelector('images-switch')
+imgSwitch.setAttribute('checked', '')
+``` 
+- `disabled`
+
+Add this attribute to disable the switch and user can not interact with the switch and cursor will be changed to 'not-allowed'
+```html
+<images-switch disabled></images-switch>
+
+```
+(or)
+```javascript
+const imgSwitch = document.querySelector('images-switch')
+imgSwitch.setAttribute('disabled', '')
+```
 
 ## CSS Custom Properties
 CSS variables allow the styling between component boundaries. Here the list of CSS properties you can use to style the `<images-switch>` component. 
 
 | CSS variables (size)   | Default value | Description 
 |-------------------------|---------------|-------------
-| `--switch-width`        | `80px`   | background color of switch when the swito for to rgba, hex values 
-| `--switch-height`       | `40px`   | background color of switch when o true. Canssign any color to rgba, hex values 
+| `--switch-width`        | `80px`   | switch width (use a 2:1 ratio between width:height) 
+| `--switch-height`       | `40px`   | switch heigth (use a 1:2 ratio between heght:width)
 | `--circle-margin`       | `3px`    | the margin between the inner switch circle and border.  
 
 | CSS variables (color)   | Default value | Description 
@@ -68,15 +97,15 @@ CSS variables allow the styling between component boundaries. Here the list of C
 
 | CSS variables (shadow)  | Default value | Description 
 |-------------------------|---------------|-------------
-| `--shadow`              |  `0 0 0px 2px rgba(0, 0, 0, 0.3)`|  color of switch Handle when t to rgba, hex values 
-| `--shadow-focus-on`     |  `0 0 5px 6px #FFDE03`           |  color of switch Handle when th color to rgba, hex values 
-| `--inner-shadow`        | `inset 0 0 4px rgba(0, 0, 0, 0.6)`|  color of switch Handle when then assigr to rgba, hex values
+| `--shadow`              |  `0 0 0px 2px rgba(0, 0, 0, 0.3)`|  shadow of the circle area 
+| `--shadow-focus-on`     |  `0 0 5px 6px #FFDE03`           |  shadow of the circle area when focus or hover 
+| `--inner-shadow`        | `inset 0 0 4px rgba(0, 0, 0, 0.6)`|  inner shadow of the switch main area 
 
 | CSS variables (images) | Default value | Description 
 |------------------------|---------------|-------------
-| `--bk-image-unchecked` | `url(unck.svg)`|  color of switch Handle when then assign any color to rgba, hex values 
-| `--bk-image-checked`   | `url(ck.svg)`  |  color of switch Handle when then assign any color to rgba, hex values 
-| `--bk-image-disabled`  | `url(dis.svg)` |  color of switch Handle when then assign any color to rgba, hex values 
+| `--bk-image-unchecked` | `url(unck.svg)`|  background-image for switch background when **unchecked**
+| `--bk-image-checked`   | `url(ck.svg)`  |  background-image for switch background when **checked** 
+| `--bk-image-disabled`  | `url(dis.svg)` |  background-image for switch background when **disabled** 
 
 
 ```css
@@ -101,23 +130,27 @@ document.documentElement.style.setProperty('--url-bk-image-unchecked', 'url(ligh
 
 
 ```javascript
-document.documentElement.addEventListener('toggle',handleToggle(e));
+const imgSwitch = document.querySelector('images-switch')
+imgSwitch.addEventListener('change',(e) => {
+     const status = e.detail.checked
+}));
 ```
 or
 
 ```html
-<jelly-switch onToggle="return handleToggle(e)"></jelly-switch>
-```
-and value can be obtained as follows
-
-```javascript
-function handleToggle(e)
-{
-    //The value after the user toggles the switch can be accessed from the below code
-    console.log('The present value of switch is '+e.detail.value);
-    //here e is the event object 
-}
+<images-switch onChange="handleChange()"></images-switch>
 ```
 
-## 🔧 TODO 
+# Accessibility
+Actually acessibility is handled with the `role=switch` and mirrororing the `checked` and `disabled` attributes from the native checkbox input element to the `<images-switch>` web component. 
+
+# 🔧 TODO 
+- [ ] Basic Unit testing 
+- [ ] Documentation
+- [ ] npm publish
+
+# License
+[Apache 2.0](https://github.com/CICCIOSGAMINO/images-switch/blob/master/LICENSE) (c)
+
+Made with ❤️ by @cicciosgamino
 
