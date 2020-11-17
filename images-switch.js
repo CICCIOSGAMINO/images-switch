@@ -36,7 +36,7 @@ class ImagesSwitch extends LitElement {
         --switch-height: 40px;
 
         --circle-margin: 3px;
-
+        
         --bk-uncheked-color: #455A64;
         --bk-checked-color: #0336FF;
         --bk-disabled-color: #999;
@@ -49,9 +49,9 @@ class ImagesSwitch extends LitElement {
         --inner-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
 
         /* background svg 2:1 images */
-        --bk-image-unchecked: url(http://localhost:8888/de.svg);
-        --bk-image-checked: url(http://localhost:8888/it.svg);
-        --bk-image-disabled: url(http://localhost:8888/forest.svg);
+        --bk-image-unchecked: url(/images/light_o.svg);
+        --bk-image-checked: url(/images/dark_o.svg);
+        --bk-image-disabled: url(/images/disabled_o.svg);
       }
 
       /*  1- Now we need to change the label position as relative , so that we can make 
