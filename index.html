@@ -19,7 +19,7 @@
   <title>WebComponent - Images Switch</title>
 
   <style>
-    body, html  {
+    body  {
       margin: 0;
       font-family: Roboto, Helvetica, Arial, sans-serif;
       padding: 2em;
@@ -27,8 +27,50 @@
     }
 
     images-switch {
-      --switch-width: 80px;
-      --switch-height: 40px;
+
+      /* Transparent Example
+      --circle-margin: 7px;
+      --switch-circle-url-unchecked: url(/images/moon.svg); */
+
+      /*
+      --border: none;
+      --bk-uk-color: #455A64;
+      --bk-ck-color: #0336FF;
+      --bk-disabled-color: #999;
+      --bk-focus-color: #FF0266; transparent;
+      --bk-hover-color: BOOO
+      --bk-ck-circle-color: whitesmoke; */
+
+      /*
+      --shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+      --shadow-circle: 0 0 0px 2px rgba(0, 0, 0, 0.3);
+      --shadow-circle-focus-on: 0 0 5px 6px #FFDE03;
+      --shadow-circle-hover-on: 0 0 5px 6px #FFDE03; */
+
+
+      /* background svg 2:1 images */
+      /* --switch-bk-ck-url: url(/images/dark_o.svg); */
+      /* --switch-bk-uk-url: url(/images/light_o.svg); */
+      /* --switch-bk-disabled-url: url(/images/disabled_o.svg); */
+      /* --switch-circle-ck-url: url();  TODO */
+      /* --switch-circle-uk-url: url(/images/moon.svg); */
+      /* --switch-circle-disabled-url: url(); TODO */
+
+      /* Github example */
+      --switch-width: 160px;
+      --switch-height: 80px;
+
+      --color-scale-purple-6: #6e40c9;
+      --color-scale-purple-7: #553098;
+      --color-scale-purple-8: #3c1e70;
+      --color-scale-purple-9: #271052;
+
+      --circle-margin: -7px;
+      --bk-ck-color: var(--color-scale-purple-9);
+      --bk-uk-circle-color: #040d21;
+      --bk-ck-circle-color: var(--color-scale-purple-6);
+
+      --switch-circle-uk-url: url(/images/moon.svg);
     }
   </style>
   

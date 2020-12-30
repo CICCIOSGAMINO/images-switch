@@ -34,6 +34,11 @@ A simple customizable switch build as web component with LitElement. The main fe
 <images-switch></images-switch>
 ```
 
+### Example Github style
+You can style the *<images-switch>* component as the github light/dark mode switch button.
+
+
+
 ## 📦 Install
 ### 1. via npm
 ```
@@ -81,27 +86,29 @@ imgSwitch.setAttribute('disabled', '')
 ## CSS Custom Properties
 CSS variables allow the styling between component boundaries. Here the list of CSS properties you can use to style the `<images-switch>` component. 
 
-| CSS variables (size)   | Default value | Description 
-|-------------------------|---------------|-------------
-| `--switch-width`        | `80px`   | switch width (use a 2:1 ratio between width:height) 
-| `--switch-height`       | `40px`   | switch heigth (use a 1:2 ratio between heght:width)
-| `--circle-margin`       | `3px`    | the margin between the inner switch circle and border.  
+| CSS vars (size)   | Default value | Description 
+|-------------------|---------------|-------------
+| `--switch-width`  |    `80px`     | switch width (use a 2:1 ratio between width:height) 
+| `--switch-height` |    `40px`     | switch heigth (use a 1:2 ratio between heght:width)
+| `--circle-margin` |     `3px`     | the margin between the inner switch circle and border.  
 
-| CSS variables (color)   | Default value | Description 
-|-------------------------|---------------|-------------
-| `--bk-uncheked-color`   | `#455A64` | background color of switch when **unchecked**           
-| `--bk-cheked-color`     | `#0336FF` | background color of switch when **checked**           
-| `--bk-disabled-color`   | `#999`    | background color of switch when **disabled**           
-| `--bk-hover-color`      | `#FF0266` | background color of switch when **hover or focus**           
-| `--bk-circle-color`     | `whitesmoke`|  background color of switch central circle    
+| CSS vars (color)    | Default value | Description 
+|---------------------|---------------|-------------
+| `--bk-uk-color`     | `transparent` | background color of switch when **unchecked**           
+| `--bk-ck-color`     | `transparent` | background color of switch when **checked**           
+|`--bk-disabled-color`| `transparent` | background color of switch when **disabled**           
+| `--bk-focus-color`  | `transparent` | background color of switch when **focus**  
+| `--bk-hover-color`  | `transparent` | background color of switch when **hover**        
+| `--bk-circle-color` | `transparent` | background color of switch central circle    
 
-| CSS variables (shadow)  | Default value | Description 
-|-------------------------|---------------|-------------
-| `--shadow`              |  `0 0 0px 2px rgba(0, 0, 0, 0.3)`|  shadow of the circle area 
-| `--shadow-focus-on`     |  `0 0 5px 6px #FFDE03`           |  shadow of the circle area when focus or hover 
-| `--inner-shadow`        | `inset 0 0 4px rgba(0, 0, 0, 0.6)`|  inner shadow of the switch main area 
+| CSS vars (shadow)  | Default value | Description 
+|--------------------|---------------|-------------
+| `--shadow`         |`inset 0 0 4px rgba(0, 0, 0, 0.6);`|  shadow of the circle area
+| `--shadow-circle`  |`0 0 0px 2px rgba(0, 0, 0, 0.3);`  |  shadow of the circle area 
+| `--shadow-circle-focus-on` |`0 0 5px 6px #FFDE03;`     |  shadow of the circle area when focus
+| `--shadow-circle-hover-on` |`0 0 5px 6px #FFDE03;`     |  shadow of the circle area when hover
 
-| CSS variables (images) | Default value | Description 
+| CSS vars (images)      | Default value | Description 
 |------------------------|---------------|-------------
 | `--bk-image-unchecked` | `url(unck.svg)`|  background-image for switch background when **unchecked**
 | `--bk-image-checked`   | `url(ck.svg)`  |  background-image for switch background when **checked** 
@@ -142,7 +149,7 @@ or
 ```
 
 # Accessibility
-Actually acessibility is handled with the `role=switch` and mirrororing the `checked` and `disabled` attributes from the native checkbox input element to the `<images-switch>` web component. 
+Actually acessibility is handled with the `role=switch` and mirrororing the `checked` and `disabled` attributes from the native checkbox input element to the `<images-switch>` web component.
 
 # 🔧 TODO 
 - [ ] Basic Unit testing 
