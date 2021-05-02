@@ -8,42 +8,39 @@ Development
 
 1.  Fork the repo.
 2.  Clone your fork.
-3.  Install [Node](https://nodejs.org/en/download/). It comes bundled with [yarn](https://yarnpkg.com/).
+3.  Install [Node](https://nodejs.org/en/download/). It comes bundled with [npm](https://www.npmjs.com/).
 4.  Install the [dependencies](#dependencies)
 
 ## Dependencies
 
-Project dependencies are managed through [Yarn](https://yarnpkg.com/lang/en/docs/install).
+Project dependencies are managed through [npm](https://www.npmjs.com/).
 
 Install dependencies with:
 
 ```sh
-yarn
+# cd into the project folder
+cd swith
+npm i
 ```
 
 ## Serve
-We use [ed dev server](https://github.com/open-wc/open-wc/tree/master/packages/es-dev-server) a web server for development without bundling. 
+We use [@web/dev-server](https://www.npmjs.com/package/@web/dev-server) as development web server. 
 
 ```bash
 # use the server without install it 
 npx es-dev-server --node-resolve --watch
 
-# install 
-npm i --save-dev es-dev-server
-```
+# install dev-dependencies
+npm i --also-dev
 
-Add scripts to your package.json, modify the flags as needed:
+# run the server
+npm run serve
+```
 
 ```json
 {
   "scripts": {
-    "start": "es-dev-server --app-index index.html --node-resolve --watch --open"
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
   }
 }
-```
-
-And run the server: 
-
-```bash
-npm run start
 ```

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.0.0] - 2020-11-17
+## [2.0.0] - 02-05-2021
+### Changed
+  - Lit package instead of Lit-element
+
+## [1.0.0] - 17-11-2020
 ### Added
 - Init by [@cicciosgamino](https://github.com/CICCIOSGAMINO).

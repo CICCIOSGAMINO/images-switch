@@ -23,7 +23,7 @@
 </p>
 
 # images-switch
-A simple customizable switch build as web component with LitElement. The main features are the svg background images (unchecked / checked / disabled ) you can use. The svg images are handled as background-image into the CSS component. You can upload your images with new names but remember to change the custom variable into images-switch.js in custom vars section.  
+A simple customizable switch build as web component with Lit. The main features are the svg background images (unchecked / checked / disabled ) you can use. The svg images are handled as background-image into the CSS component. You can upload your images with new names but remember to change the custom variable into images-switch.js in custom vars section.  
 
 > NOTE: 
      - The web componenst still in beta, so let's open an issue, pull a request or at least add it in 🔧 TODO section of README.md doc !! 

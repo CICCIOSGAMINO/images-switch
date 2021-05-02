@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element'
+import { LitElement, html, css } from 'lit'
 
 class ImagesSwitch extends LitElement {
   static get properties () {

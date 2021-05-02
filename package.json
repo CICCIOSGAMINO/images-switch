@@ -1,7 +1,7 @@
 {
   "name": "@cicciosgamino/images-switch",
-  "version": "1.0.0",
-  "description": "WebComponent of simple switch, toggle between two images (SVG)",
+  "version": "2.0.0",
+  "description": "Simple switch, toggle between two background images (SVG)",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -11,17 +11,17 @@
   "license": "Apache-2.0",
   "private": false,
   "dependencies": {
-    "lit-element": "^2.4.0"
+    "lit": "*"
   },
   "bugs": {
     "url": "https://github.com/CICCIOSGAMINO/images-switch/issues"
   },
   "homepage": "https://github.com/CICCIOSGAMINO/images-switch#readme",
   "devDependencies": {
-    "@web/dev-server": "^0.1.2"
+    "@web/dev-server": "^0.1.17"
   },
   "scripts": {
-    "serve": "wds --node-resolve --watch",
+    "serve": "web-dev-server --node-resolve --app-index index.html --watch --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
