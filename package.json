@@ -1,29 +1,40 @@
 {
   "name": "@cicciosgamino/images-switch",
-  "version": "2.0.0",
-  "description": "Simple switch, toggle between two background images (SVG)",
-  "main": "index.js",
+  "version": "3.0.0",
+  "description": "Simple Lit switch, toggle between two background images (SVG)",
+  "main": "images-switch.js",
+  "type": "module",
+  "module": "images-switch.js",
+  "scripts": {
+    "serve": "web-dev-server --node-resolve --app-index examples/index.html --watch --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CICCIOSGAMINO/images-switch.git"
   },
+  "keywords": [
+    "WebComponent",
+    "CustomElement",
+    "Lit",
+    "Progress",
+    "Ring",
+    "ProgressRing",
+    "Percent"
+  ],
   "author": "@cicciosgamino <marco.canali@gmail.com>",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0",
   "private": false,
   "dependencies": {
     "lit": "*"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.17"
   },
   "bugs": {
     "url": "https://github.com/CICCIOSGAMINO/images-switch/issues"
   },
   "homepage": "https://github.com/CICCIOSGAMINO/images-switch#readme",
-  "devDependencies": {
-    "@web/dev-server": "^0.1.17"
-  },
-  "scripts": {
-    "serve": "web-dev-server --node-resolve --app-index index.html --watch --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "Switch",
     "Toggle",

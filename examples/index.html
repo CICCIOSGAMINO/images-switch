@@ -1,0 +1,153 @@
+<!-- twitter / ig @cicciosgamino
+
+   _______           _                                  _
+  / ____(_)_________(_)___  _________ _____ _____ ___  (_)___  ____
+ / /   / / ___/ ___/ / __ \/ ___/ __ `/ __ `/ __ `__ \/ / __ \/ __ \
+/ /___/ / /__/ /__/ / /_/ (__  ) /_/ / /_/ / / / / / / / / / / /_/ /
+\____/_/\___/\___/_/\____/____/\__, /\__,_/_/ /_/ /_/_/_/ /_/\____/
+                              /____/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="author" content="@cicciosgamino"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Images Switch</title>
+
+  <style>
+    body  {
+      margin: 0;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      padding: 2em;
+      text-align: center;
+    }
+
+    images-switch {
+
+      /* All Custom Vars
+      --switch-width: 160px;
+      --switch-height: 80px;
+      --switch-border: none;
+      --switch-border-checked: none;
+      --switch-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+      --switch-bk-color: #455A64;
+      --switch-bk-ck-color: #0336FF;
+      --switch-bk-disabled-color: #999;
+      --switch-bk-focus-color: #FF0266;
+      --switch-bk-hover-color: red;
+      --switch-bk-ck-url: url(/images/dark_o.svg);
+      --switch-bk-url: url(/images/light_o.svg);
+      --switch-bk-disabled-url: url(/images/disabled_o.svg);
+
+      --circle-url: url(/images/moon.svg);
+      --circle-ck-url: url();
+      --circle-disabled-url: url();
+      --circle-margin: 7px;
+      --circle-bkcolor: whitesmoke;
+      --circle-ck-bkcolor: whitesmoke;
+      --circle-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.3);
+      --circle-shadow-focus-on: 0 0 5px 6px #FFDE03;
+      --circle-shadow-hover-on: 0 0 5px 6px #FFDE03; 
+      
+      --text-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --text-font-size: 2rem;
+      --text-font-weight: 300;
+      --text-absolute-top: 1.5rem; 
+      --text-absolute-right: 7rem;  */
+
+      /* Green check & Red cross
+      --switch-width: 160px;
+      --switch-height: 80px;
+      --circle-margin: 9px;
+
+      --border: none;
+      --switch-bk-color: #ff5683;
+      --switch-bk-ck-color: #72e06f;
+      --switch-bk-disabled-color: #bbb;
+      --circle-bkcolor: whitesmoke;
+      --circle-ck-bkcolor: whitesmoke;
+
+      --switch-bk-ck-url: url(/images/check.svg);
+      --switch-bk-url: url(/images/cross.svg);
+
+      --switch-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+      --circle-shadow: 0 0 0px 2px rgba(100, 100, 100, 0.2);
+      --circle-shadow-focus-on: 0 0 5px 6px #FFDE03;
+      --circle-shadow-hover-on: 0 0 5px 6px #FFDE03; */
+
+      /* Microsoft */
+      --switch-width: 150px;
+      --switch-height: 60px;
+      --circle-margin: 15px;
+
+      --switch-border: 4px solid #000;
+      --switch-border-checked: 4px solid #00a2ed;
+
+      --switch-bk-color: #fff;
+      --switch-bk-ck-color: #00a2ed;
+      --switch-bk-disabled-color: #ccc;
+
+      --circle-bkcolor: #000;
+      --circle-ck-bkcolor: whitesmoke;
+
+      --text-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --text-font-size: 2rem;
+      --text-font-weight: 300;
+
+      /* Camping example
+      --switch-width: 160px;
+      --switch-height: 80px;
+
+      --circle-margin: 9px;
+
+      --circle-bkcolor: whitesmoke;
+      --circle-ck-bkcolor: whitesmoke;
+
+      --switch-bk-ck-url: url(/images/dark_o.svg);
+      --switch-bk-url: url(/images/light_o.svg);
+      --switch-bk-disabled-url: url(/images/disabled_o.svg); */
+
+      /* Github example
+      --switch-width: 160px;
+      --switch-height: 80px;
+      --switch-border: 4px solid #000;
+      --switch-border-checked: 4px solid #faf614;
+      --circle-url: url(/images/moon.svg);
+
+      --color-scale-purple-6: #6e40c9;
+      --color-scale-purple-9: #271052;
+
+      --circle-margin: -7px;
+      --bk-ck-color: var(--color-scale-purple-9);
+      --circle-bkcolor: #040d21;
+      --circle-ck-bkcolor: var(--color-scale-purple-6); */
+    }
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- Images switch -->
+  <images-switch truetext="On" falsetext="Off"></images-switch>
+
+  <noscript>
+    Please enable JavaScript to view this website.
+  </noscript>
+
+  <!-- Import Js Module -->
+  <script type="module" src="../images-switch.js"></script>
+
+  <script>
+    const imgSwitch = document.querySelector('images-switch')
+    imgSwitch.addEventListener('change', (e) => {
+      console.log(e.detail.checked)
+    })
+  </script>
+
+</body>
+</html>

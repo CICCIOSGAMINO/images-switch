@@ -6,6 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 27-05-2021
+### Added
+  - New CSS Custom Properties
+  - New Examples
+### Changed
+  - README.md
+
+## [2.1.0] - 18-05-2021
+### Added
+  - Scope @cicciosgamino in npmjs, module into package.json
+  - examples folder with the index.html
+  - ready to WebComponents.org
+
+### Changed
+  - Rebuild the README.md
+  - package.json with module and Lit element
+
 ## [2.0.0] - 02-05-2021
 ### Changed
   - Lit package instead of Lit-element

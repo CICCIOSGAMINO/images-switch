@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="160" height="80" viewBox="0 0 160 79.999999" version="1.1" id="svg5" inkscape:version="1.2-dev (7c19a783d7, 2021-05-18)" sodipodi:docname="cross.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:document-units="px" showgrid="false" width="160px" units="px" inkscape:zoom="2.8494871" inkscape:cx="35.444975" inkscape:cy="47.552417" inkscape:window-width="1366" inkscape:window-height="704" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="layer1" />
+  <defs id="defs2">
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1097" x="-0.10799741" y="-0.12906411" width="1.2159948" height="1.2581282">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="1.8565569" id="feGaussianBlur1099" />
+    </filter>
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1288" x="-0.10799741" y="-0.12907141" width="1.2159948" height="1.2581428">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="1.8565569" id="feGaussianBlur1290" />
+    </filter>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path id="path1077" style="color:#000000;overflow:visible;mix-blend-mode:normal;fill:#ffffff;stroke:none;stroke-width:4.67909;stroke-linecap:square;filter:url(#filter1097);stop-color:#000000" d="m 97.50586,28.105469 -1,1 L 108.40039,41 l 1,-1 z m 39.25781,0 L 124.86914,40 l 1,1 11.89453,-11.894531 z m -19.62695,19.628906 -12.89453,12.894531 -6.73633,-6.736328 -1,1 7.73633,7.736328 12.89453,-12.894531 12.89258,12.894531 7.73437,-7.736328 -1,-1 -6.73437,6.736328 z" />
+    <path id="path1268" style="color:#000000;overflow:visible;opacity:0.5;fill:#1a1a1a;stroke:none;stroke-width:4.67909;stroke-linecap:square;filter:url(#filter1288);stop-color:#000000" d="m 104.24219,17.371094 -7.73633,7.734375 1,1 6.73633,-6.734375 12.89453,12.894531 12.89258,-12.894531 6.73437,6.734375 1,-1 -7.73437,-7.734375 -12.89258,12.894531 z M 108.40039,39 96.50586,50.892578 l 1,1 L 109.40039,40 Z m 17.46875,0 -1,1 11.89453,11.892578 1,-1 z" />
+    <path id="rect846-3-6" style="color:#000000;overflow:visible;opacity:0.2;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.05008;stroke-linecap:square;stop-color:#000000" d="m 105.97536,22.144649 -6.69548,6.694067 11.16057,11.160573 -11.16057,11.16057 6.69548,6.695492 11.16058,-11.160572 11.16057,11.160572 6.69407,-6.695491 -11.16057,-11.160571 11.16057,-11.160572 -6.69407,-6.694067 -11.16057,11.160572 z" />
+  </g>
+</svg>

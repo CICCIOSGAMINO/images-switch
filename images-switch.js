@@ -1,34 +1,44 @@
 import { LitElement, html, css } from 'lit'
 
 class ImagesSwitch extends LitElement {
-  static get properties () {
-    return {
-      checked: {
-        type: Boolean,
-        attribute: true,
-        reflect: true
-      },
-      disabled: {
-        type: Boolean,
-        attribute: true,
-        refelect: true
-      },
-      value: String
-    }
-  }
-
-  constructor () {
-    super()
-    // init
-    this.checked = false
-    this.disabled = false
-    this.value = ''
-  }
-
   static get styles () {
     return css`
       :host {
         display: inline-block;
+        position: relative;
+
+        /* All custom vars
+        --switch-width: 80px;
+        --switch-height: 40px;
+        --switch-border: none;
+        --switch-border-checked: none;
+        --switch-shadow: none;
+        --switch-bk-color: #455A64;
+        --switch-bk-ck-color: #0336FF;
+        --switch-bk-disabled-color: #999;
+        --switch-bk-focus-color: #FF0266;
+        --switch-bk-hover-color: red;
+        --switch-bk-ck-url: url(/images/dark_o.svg);
+        --switch-bk-url: url(/images/light_o.svg);
+        --switch-bk-disabled-url: url(/images/disabled_o.svg);
+
+        --circle-url: url(/images/moon.svg);
+        --circle-ck-url: url();
+        --circle-disabled-url: url();
+
+        --circle-margin: 7px;
+        --circle-bkcolor: whitesmoke;
+        --circle-ck-bkcolor: whitesmoke;
+        --circle-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.3);
+        --circle-shadow-focus-on: 0 0 5px 6px #FFDE03;
+        --circle-shadow-hover-on: 0 0 5px 6px #FFDE03;
+
+        --text-font-family: sans-serif;
+        --text-font-size: 2rem;
+        --text-font-weight: 300;
+        --text-absolute-top: -1.5rem;
+        --text-absolute-right: -7rem; */
+        
       }
 
       /*  1- Now we need to change the label position as relative , so that we can make 
@@ -38,18 +48,18 @@ class ImagesSwitch extends LitElement {
         display: block;
         width: var(--switch-width, 80px);
         height: var(--switch-height, 40px);
-        background-color: var(--bk-uk-color, transparent);
+        background-color: var(--switch-bk-color, transparent);
         border-radius: var(--switch-height, 40px);
 
         cursor: pointer;
         transition: all .3s;
 
-        background-image: var(--switch-bk-uk-url, none);
+        background-image: var(--switch-bk-url, none);
         background-size: var(--switch-width, 80px) var(--switch-height, 40px);
 
         /* out or inner shadow */
-        border: var(--border, none);
-        box-shadow: var(--shadow, inset 0 0 4px rgba(0, 0, 0, 0.6));
+        border: var(--switch-border, none);
+        box-shadow: var(--switch-shadow, none);
       }
 
       /* 2 - Add the circle to the toggle switch using ::after pseudo class */ 
@@ -59,8 +69,8 @@ class ImagesSwitch extends LitElement {
         width: calc(var(--switch-height, 40px) - (var(--circle-margin, 3px) * 2));
         height: calc(var(--switch-height, 40px) - (var(--circle-margin, 3px) * 2));
         border-radius: 50%;
-        background-color: var(--bk-uk-circle-color, transparent);
-        background-image: var(--switch-circle-uk-url, none);
+        background-color: var(--circle-bkcolor, transparent);
+        background-image: var(--circle-url, none);
         /* background-size: var(calc(--switch-height / 3), 10px) var(calc(--switch-height / 3), 10px);*/
         background-size: calc(var(--switch-height, 40px) - (var(--circle-margin, 3px) * 2)) calc(var(--switch-height, 40px) - (var(--circle-margin, 3px) * 2));
         /* to give an effect of circle inside switch */ 
@@ -69,7 +79,7 @@ class ImagesSwitch extends LitElement {
         transition: all .3s;
 
         /* shadow */ 
-        box-shadow: var(--shadow-circle, 0 0 0px 2px rgba(0, 0, 0, 0.3));
+        box-shadow: var(--circle-shadow, none);
       }
 
       /* 3 - Now we need to change the background color and position of circle when the 
@@ -77,37 +87,38 @@ class ImagesSwitch extends LitElement {
       input:checked + label::after {
         /* move left */ 
         left: calc(100% - (var(--switch-height, 40px) - var(--circle-margin, 3px)));
-        background-color: var(--bk-ck-circle-color, transparent);
+        background-color: var(--circle-ck-bkcolor, transparent);
       }
 
       input:checked + label {
+        border: var(--switch-border-checked, none);
         /* fallback color */
-        background-color: var(--bk-ck-color, transparent);
+        background-color: var(--switch-bk-ck-color, transparent);
         background-image: var(--switch-bk-ck-url, none);
         background-size: var(--switch-width, 80px) var(--switch-height, 40px);
       }
 
       /* handle the fallback background hover focus (useless with images) */ 
       input[type=checkbox]:focus + label {
-        background-color: var(--bk-focus-color, transparent);
+        background-color: var(--switch-bk-focus-color, transparent);
       }
 
       input[type=checkbox]:hover + label {
-        /* background-color: var(--bk-hover-color, transparent); */
+        /* background-color: var(--switch-bk-hover-color, transparent); */
       }
 
       /* Handle the circle when :hover or :focus */ 
       input[type=checkbox]:focus + label::after {
-        box-shadow: var(--shadow-circle-focus-on, 0 0 5px 6px #FFDE03);
+        box-shadow: var(--circle-shadow-focus-on, none);
       }
 
       input[type=checkbox]:hover + label::after {
-        box-shadow: var(--shadow-circle-hover-on, 0 0 5px 6px #FFDE03);
+        box-shadow: var(--circle-shadow-hover-on, none);
       }
 
       /* 4 - Handling the disabled style */ 
       input[type=checkbox][disabled] + label {
-        background-color: var(--bk-disabled-color, transparent);
+        background-color: var(--switch-bk-disabled-color, transparent);
         background-image: var(--switch-bk-disabled-url, none);
         background-size: var(--switch-width, 80px) var(--switch-height, 40px);
         cursor: not-allowed;
@@ -122,7 +133,7 @@ class ImagesSwitch extends LitElement {
 
       /* 5 - Handling indeterminate */ 
       input[type=checkbox]:indeterminate + label {
-        background-color: var(--bk-disabled-color, transparent);
+        background-color: var(--switch-bk-disabled-color, transparent);
         background-image: none;
       }
 
@@ -135,7 +146,46 @@ class ImagesSwitch extends LitElement {
       input[type=checkbox] {
         display: none;
       }
+
+      /* 7 - Absolute positioning the text if needed */
+      p {
+        font-family: var(--text-font-family, sans-serif);
+        font-size: var(--text-font-size, 2rem);
+        font-weight: var(--text-font-weight, 300);
+        position: absolute;
+        top: var(--text-absolute-top, -1.5rem);
+        right: var(--text-absolute-right, -7rem);
+      }
     `
+  }
+
+  static get properties () {
+    return {
+      checked: {
+        type: Boolean,
+        attribute: true,
+        reflect: true
+      },
+      disabled: {
+        type: Boolean,
+        attribute: true,
+        refelect: true
+      },
+      value: String,
+      trueText: String,
+      falseText: String
+    }
+  }
+
+  constructor () {
+    super()
+    // init
+    this.checked = false
+    this.disabled = false
+    this.value = ''
+    this.trueText = ''
+    this.falseText = ''
+    this.text = ''
   }
 
   connectedCallback () {
@@ -144,16 +194,17 @@ class ImagesSwitch extends LitElement {
     this.setAttribute('tabindex', '0')
     this.setAttribute('role', 'switch')
     // connect listeners
-    this.addEventListener('keyup', this._handleKeyPress)
+    this.addEventListener('keyup', this.#handleKeyPress)
+    this.#updateText()
   }
 
   disconnectedCallback () {
     // disconnect listeners
-    this.removeEventListener('keyup', this._handleKeyPress)
+    this.removeEventListener('keyup', this.#handleKeyPress)
     super.disconnectedCallback()
   }
 
-  _handleKeyPress (e) {
+  #handleKeyPress (e) {
     const KEYCODE = {
       ENTER: 13,
       SPACE: 32,
@@ -163,30 +214,36 @@ class ImagesSwitch extends LitElement {
     if (!this.disabled) {
       switch (e.keyCode) {
         case KEYCODE.SPACE:
-          this._handleToggle()
+          this.#handleToggle()
           break
         case KEYCODE.ENTER:
-          this._handleToggle()
+          this.#handleToggle()
           break
       }
     }
   }
 
-  _handleChange () {
+  #handleChange () {
     if (!this.disabled) {
       this.checked = this.shadowRoot.querySelector('#switch').checked
-      this._dispatchChange(this.checked)
+      this.#updateText()
+      this.#dispatchChange(this.checked)
     }
   }
 
-  _handleToggle () {
+  #handleToggle () {
     if (!this.disabled) {
       this.checked = !this.checked
-      this._dispatchChange(this.checked)
+      this.#updateText()
+      this.#dispatchChange(this.checked)
     }
   }
 
-  _dispatchChange (checked) {
+  #updateText () {
+    this.text = this.checked ? this.trueText : this.falseText
+  }
+
+  #dispatchChange (checked) {
     const changeEvent = new CustomEvent('change', {
       detail: { checked: checked },
       bubbles: true,
@@ -201,11 +258,14 @@ class ImagesSwitch extends LitElement {
         <input type="checkbox"
           id="switch"
           role="switch"
+          name="label-switch"
           .checked="${this.checked}"
           .value="${this.value}"
           ?disabled="${this.disabled}"
-          @change="${this._handleChange}" />
-        <label for="switch"></label>
+          @change="${this.#handleChange}"
+          aria-labelledby="label-switch"/>
+        <label id="label-switch" for="switch"></label>
+        <p id="text">${this.text}</p>
     `
   }
 }

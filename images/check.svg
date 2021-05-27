@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="160" height="80" viewBox="0 0 160 79.999999" version="1.1" id="svg5" inkscape:version="1.2-dev (7c19a783d7, 2021-05-18)" sodipodi:docname="check.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview id="namedview7" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:document-units="px" showgrid="false" width="160px" units="px" inkscape:zoom="2.8494871" inkscape:cx="71.591831" inkscape:cy="47.552417" inkscape:window-width="1366" inkscape:window-height="704" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="layer1" />
+  <defs id="defs2">
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1050" x="-0.086425313" y="-0.14392973" width="1.1728506" height="1.2878595">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="2.0703955" id="feGaussianBlur1052" />
+    </filter>
+    <filter inkscape:collect="always" style="color-interpolation-filters:sRGB" id="filter1261" x="-0.086669963" y="-0.1793283" width="1.1733399" height="1.3586566">
+      <feGaussianBlur inkscape:collect="always" stdDeviation="2.0762562" id="feGaussianBlur1263" />
+    </filter>
+  </defs>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path id="path1030" style="color:#000000;overflow:visible;mix-blend-mode:normal;fill:#f9f9f9;stroke:none;stroke-width:3.95691;stroke-linecap:square;filter:url(#filter1050);stop-color:#000000" d="m 72.730469,28.105469 -24.78711,24.787109 -7.734375,7.736328 -7.734375,-7.736328 -15.238281,-15.238281 -1,1 16.238281,16.238281 7.734375,7.736328 7.734375,-7.736328 25.78711,-25.787109 z" transform="matrix(0.89954466,0,0,0.89954466,4.5188222,4.0175072)" />
+    <path id="path1158" style="color:#000000;overflow:visible;opacity:0.5;fill:#1a1a1a;stroke:none;stroke-width:3.95691;stroke-linecap:square;filter:url(#filter1261);stop-color:#000000" d="m 65.996094,17.371094 -25.78711,25.787109 -16.238281,-16.238281 -7.734375,7.734375 1,1 6.734375,-6.734375 16.238281,16.238281 25.78711,-25.787109 6.734375,6.734375 1,-1 z" transform="matrix(0.89954466,0,0,0.89954466,4.5188222,4.0175072)" />
+    <path id="rect846" style="color:#000000;overflow:visible;opacity:0.2;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:2.95876;stroke-linecap:square;stop-color:#000000" d="M 60.69552,24.574502 41.41407,43.855951 29.270848,31.713958 l -5.782837,5.784067 12.141992,12.141993 5.782838,5.784068 5.784066,-5.784067 19.28268,-19.282679 z" />
+  </g>
+</svg>
