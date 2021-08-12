@@ -282,25 +282,22 @@ Browsers without native [custom element support][support] require a [polyfill][]
 [support]: https://caniuse.com/#feat=custom-elementsv1
 [polyfill]: https://github.com/webcomponents/custom-elements
 
-      ## 🧑‍💻 Author
+## 🧑‍💻 Author
+| [![@cicciosgamino](https://raw.githubusercontent.com/CICCIOSGAMINO/cicciosgamino.github.io/master/images/justme%40412x412_round.png)](https://www.linkedin.com/in/marco-canali-859b6a52/) 	|
+|:------------------------------------------------------------------------------------------:	|
+|                                    **@cicciosgamino**                                      	|
 
-      | [![@cicciosgamino](https://raw.githubusercontent.com/CICCIOSGAMINO/cicciosgamino.github.io/master/images/justme%40412x412_round.png)](https://www.linkedin.com/in/marco-canali-859b6a52/) 	|
-      |:------------------------------------------------------------------------------------------:	|
-      |                                    **@cicciosgamino**                                      	|
+## Support
+Reach out to me at one of the following places:
 
+- [Github](https://github.com/CICCIOSGAMINO)
+- [Twitter](https://twitter.com/cicciosgamino)
 
-      ## Support
-      Reach out to me at one of the following places:
+## Donate
+Donate help and contibutions!
 
-      - [Github](https://github.com/CICCIOSGAMINO)
-      - [Twitter](https://twitter.com/cicciosgamino)
+## License
+[GNU General Public License v3.0](https://github.com/CICCIOSGAMINO/init/blob/master/LICENSE)
 
-      ## Donate
-
-      Donate help and contibutions!
-
-      ## License
-      [GNU General Public License v3.0](https://github.com/CICCIOSGAMINO/init/blob/master/LICENSE)
-
-      Made 🧑‍💻 by [@cicciosgamino](https://cicciosgamino.web.app)
+Made 🧑‍💻 by [@cicciosgamino](https://cicciosgamino.web.app)
 
